@@ -18,4 +18,4 @@
 </div>
 
 ## 📢 Updates
-- **[Coming Soon]** We will release the full training code, scene graph datasets, fine-tuned models, and evaluation scripts upon paper acceptance.
+- **[Coming Soon]** We will release the full training and evaluation scripts upon paper acceptance.

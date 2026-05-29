@@ -19,6 +19,8 @@
 [![arXiv](https://img.shields.io/badge/arXiv-2603.12916-b31b1b.svg?style=plastic)](https://arxiv.org/abs/2603.12916)
 [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FFD21E?logo=huggingface&logoColor=000)](https://huggingface.co/papers/2603.12916)
 
+Accepted to appear in ECML-PKDD 2026 Applied Data Science Track
+
 </div>
 
 ## 📢 Updates

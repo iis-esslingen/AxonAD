@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TSB-AD Leaderboard</title>
+  <style>
+    :root {
+      --border: #d7dde5;
+      --border-strong: #b7c1cc;
+      --header-bg: #eef2f6;
+      --row-alt: #f8fafc;
+      --row-hover: #edf3f9;
+      --text: #17212b;
+      --muted: #5b6773;
+      --link: #0f4c81;
+      --success-bg: #edf7ed;
+      --success-text: #1f5f3b;
+      --empty-text: #8a94a0;
+    }
+    body {
+      margin: 0;
+      padding: 16px;
+      color: var(--text);
+      background: #ffffff;
+      font-family: "Georgia", "Times New Roman", serif;
+    }
+    .table-note {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      font-size: 14px;
+      border: 1px solid var(--border);
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 10px 12px;
+    }
+    th {
+      cursor: pointer;
+      background-color: var(--header-bg);
+      position: relative;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border-bottom: 1.5px solid var(--border-strong);
+    }
+    th.sort-asc::after {
+      content: ' ▲';
+      position: absolute;
+      right: 8px;
+    }
+    th.sort-desc::after {
+      content: ' ▼';
+      position: absolute;
+      right: 8px;
+    }
+    tbody tr:nth-child(even) {
+      background-color: var(--row-alt);
+    }
+    tbody tr:hover {
+      background-color: var(--row-hover);
+    }
+    td:first-child, th:first-child {
+      text-align: left;
+      width: 44%;
+    }
+    td:not(:first-child) {
+      text-align: center;
+    }
+    td {
+      line-height: 1.45;
+    }
+    td a {
+      color: var(--link);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    td a:hover {
+      text-decoration: underline;
+    }
+    tbody tr:first-child td {
+      font-weight: 700;
+    }
+    .pretrained-yes {
+      color: var(--success-text);
+      background: var(--success-bg);
+      font-weight: 700;
+    }
+    .pretrained-no {
+      color: var(--muted);
+    }
+    .missing {
+      color: var(--empty-text);
+    }
+  </style>
+</head>
+<body>
+  <p class="table-note">Click column headers to sort. Dashes indicate results that are not reported for that benchmark split.</p>
+  <table id="sortableTable">
+    <thead>
+      <tr>
+        <th>Method</th>
+        <th class="sort-desc" data-order="desc">TSB-AD-U</th>
+        <th>TSB-AD-M</th>
+        <th>Pretrained</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr><td><a href="https://github.com/thedatumorg/TSB-AD/blob/main/TSB_AD/models/TSPulse.py" target="_blank" rel="noopener noreferrer">TSPulse (FT)</a></td><td>0.55</td><td>0.39</td><td>✓</td></tr><!-- Pretrained -->
+      <tr><td><a href="https://github.com/thedatumorg/TSB-AD/blob/main/TSB_AD/models/TSPulse.py" target="_blank" rel="noopener noreferrer">TSPulse (ZS)</a></td><td>0.48</td><td>0.36</td><td>✓</td></tr><!-- Pretrained -->
+      <tr><td><a href="https://github.com/thedatumorg/TSB-AD/blob/main/TSB_AD/models/xLSTMAD.py" target="_blank" rel="noopener noreferrer">xLSTMAD</a></td><td>0.40</td><td>0.39</td><td>✗</td></tr>
+      <tr><td><a href="https://github.com/thedatumorg/TSB-AD/blob/main/TSB_AD/models/MMPAD.py" target="_blank" rel="noopener noreferrer">MMPAD</a></td><td>0.44</td><td>0.35</td><td>✗</td></tr>
+      <tr><td><a href="https://github.com/thedatumorg/TSB-AD/blob/main/TSB_AD/models/CHARM.py" target="_blank" rel="noopener noreferrer">CHARM</a></td><td>0.50</td><td>0.39</td><td>✓</td></tr>
+      <tr><td><a href="https://github.com/thedatumorg/TSB-AD/blob/main/TSB_AD/models/Time_RCD.py" target="_blank" rel="noopener noreferrer">Time-RCD</a></td><td>0.52</td><td>0.32</td><td>✓</td></tr>
+
+      <tr><td>PCA</td><td>0.42</td><td>0.31</td><td>✗</td></tr>
+      <tr><td>KShapeAD</td><td>0.40</td><td>-</td><td>✗</td></tr>
+      <tr><td>POLY</td><td>0.39</td><td>-</td><td>✗</td></tr>
+      <tr><td>Series2Graph</td><td>0.39</td><td>-</td><td>✗</td></tr>
+      <tr><td>MOMENT (FT)</td><td>0.39</td><td>-</td><td>✓</td></tr><!-- Pretrained -->
+      <tr><td>MOMENT (ZS)</td><td>0.38</td><td>-</td><td>✓</td></tr><!-- Pretrained -->
+      <tr><td>KMeansAD</td><td>0.37</td><td>0.29</td><td>✗</td></tr>
+      <tr><td>USAD</td><td>0.36</td><td>0.30</td><td>✗</td></tr>
+      <tr><td>MatrixProfile</td><td>0.35</td><td>-</td><td>✗</td></tr>
+      <tr><td>SAND</td><td>0.34</td><td>-</td><td>✗</td></tr>
+      <tr><td>CNN</td><td>0.34</td><td>0.31</td><td>✗</td></tr>
+      <tr><td>LSTMAD</td><td>0.33</td><td>0.31</td><td>✗</td></tr>
+      <tr><td>SR</td><td>0.32</td><td>-</td><td>✗</td></tr>
+      <tr><td>TimesFM</td><td>0.30</td><td>-</td><td>✓</td></tr><!-- Pretrained -->
+      <tr><td>IForest</td><td>0.30</td><td>0.20</td><td>✗</td></tr>
+      <tr><td>OmniAnomaly</td><td>0.29</td><td>0.31</td><td>✗</td></tr>
+      <tr><td>Lag-Llama</td><td>0.27</td><td>-</td><td>✓</td></tr><!-- Pretrained -->
+      <tr><td>Chronos</td><td>0.27</td><td>-</td><td>✓</td></tr><!-- Pretrained -->
+      <tr><td>AutoEncoder</td><td>0.26</td><td>0.30</td><td>✗</td></tr>
+      <tr><td>TimesNet</td><td>0.26</td><td>0.19</td><td>✗</td></tr>
+      <tr><td>TranAD</td><td>0.26</td><td>0.18</td><td>✗</td></tr>
+      <tr><td>FITS</td><td>0.26</td><td>0.21</td><td>✗</td></tr>
+      <tr><td>OFA</td><td>0.24</td><td>0.21</td><td>✓</td></tr><!-- Pretrained -->
+      <tr><td>RobustPCA</td><td>-</td><td>0.24</td><td>✗</td></tr>
+      <tr><td>Sub-IForest</td><td>0.22</td><td>-</td><td>✗</td></tr>
+      <tr><td>CBLOF</td><td>-</td><td>0.27</td><td>✗</td></tr>
+      <tr><td>MCD</td><td>0.24</td><td>0.27</td><td>✗</td></tr>
+      <tr><td>OCSVM</td><td>0.23</td><td>0.26</td><td>✗</td></tr>
+      <tr><td>Donut</td><td>0.20</td><td>0.26</td><td>✗</td></tr>
+      <tr><td>EIF</td><td>-</td><td>0.21</td><td>✗</td></tr>
+      <tr><td>COPOD</td><td>-</td><td>0.20</td><td>✗</td></tr>
+      <tr><td>HBOS</td><td>0.23</td><td>0.19</td><td>✗</td></tr>
+      <tr><td>LOF</td><td>0.25</td><td>0.14</td><td>✗</td></tr>
+      <tr><td>KNN</td><td>0.35</td><td>0.18</td><td>✗</td></tr>
+      <tr><td>AnomalyTransformer</td><td>0.12</td><td>0.12</td><td>✗</td></tr>
+    </tbody>
+  </table>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const table = document.getElementById('sortableTable');
+      const headers = table.querySelectorAll('th');
+      const tbody = table.querySelector('tbody');
+      const rows = Array.from(tbody.querySelectorAll('tr'));
+
+      function formatCells() {
+        Array.from(tbody.querySelectorAll('tr')).forEach((row, rowIndex) => {
+          const cells = row.children;
+          const tsbUCell = cells[1];
+          const tsbMCell = cells[2];
+          const pretrainedCell = cells[3];
+
+          row.dataset.rank = String(rowIndex + 1);
+
+          [tsbUCell, tsbMCell].forEach((cell) => {
+            const value = cell.textContent.trim();
+            cell.classList.toggle('missing', value === '-');
+          });
+
+          const pretrained = pretrainedCell.textContent.trim();
+          pretrainedCell.classList.remove('pretrained-yes', 'pretrained-no');
+          pretrainedCell.classList.add(pretrained === '✓' ? 'pretrained-yes' : 'pretrained-no');
+        });
+      }
+
+      function parseValue(text) {
+        return text.trim() === '-' ? -1 : parseFloat(text.trim());
+      }
+
+      function isNumericColumn(index) {
+        return index === 1 || index === 2;
+      }
+
+      const defaultColumnIndex = 1;
+
+      rows.sort((a, b) => {
+        const aVal = parseValue(a.children[defaultColumnIndex].textContent);
+        const bVal = parseValue(b.children[defaultColumnIndex].textContent);
+        return bVal - aVal;
+      });
+
+      tbody.innerHTML = '';
+      tbody.append(...rows);
+      formatCells();
+
+      headers.forEach((header, index) => {
+        header.addEventListener('click', () => {
+          const rows = Array.from(tbody.querySelectorAll('tr'));
+          const isAscending = header.getAttribute('data-order') === 'asc';
+          const newOrder = isAscending ? 'desc' : 'asc';
+
+          headers.forEach(h => {
+            h.classList.remove('sort-asc', 'sort-desc');
+            h.removeAttribute('data-order');
+          });
+
+          header.classList.add(newOrder === 'asc' ? 'sort-asc' : 'sort-desc');
+          header.setAttribute('data-order', newOrder);
+
+          const sortedRows = rows.sort((a, b) => {
+            const aText = a.children[index]?.textContent.trim() || '';
+            const bText = b.children[index]?.textContent.trim() || '';
+
+            if (!isNumericColumn(index)) {
+              return newOrder === 'asc'
+                ? aText.localeCompare(bText)
+                : bText.localeCompare(aText);
+            }
+
+            const aVal = parseValue(aText);
+            const bVal = parseValue(bText);
+
+            return newOrder === 'asc' ? aVal - bVal : bVal - aVal;
+          });
+
+          tbody.innerHTML = '';
+          tbody.append(...sortedRows);
+          formatCells();
+        });
+      });
+
+      headers[defaultColumnIndex].classList.add('sort-desc');
+      headers[defaultColumnIndex].setAttribute('data-order', 'desc');
+    });
+  </script>
+</body>
+</html>

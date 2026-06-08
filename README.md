@@ -297,6 +297,7 @@ Or describe it in Issues.
 
 ### 🎉 Acknowledgement
 We appreciate the following github repos a lot for their valuable code base:
+* https://github.com/thedatumorg/TSB-AD
 * https://github.com/yzhao062/pyod
 * https://github.com/TimeEval/TimeEval-algorithms
 * https://github.com/thuml/Time-Series-Library/

@@ -281,14 +281,35 @@ The repository uses the TSB-AD evaluation pipeline and reports the benchmark met
 If you use this repository, please cite:
 
 ```bibtex
-@misc{ozer2026predictable,
-  title={Predictable Query Dynamics for Time-Series Anomaly Detection},
-  author={Kadir-Kaan Özer and René Ebeling and Markus Enzweiler},
-  year={2026},
-  eprint={2603.12916},
-  archivePrefix={arXiv},
-  url={https://arxiv.org/abs/2603.12916}
+@InProceedings{ozer2027,
+author="{\"O}zer, Kadir-Kaan
+and Ebeling, Ren{\'e}
+and Enzweiler, Markus",
+editor="Baratchi, Mitra
+and Bonchi, Francesco
+and Guidotti, Riccardo
+and Gullo, Francesco
+and Mignone, Paolo
+and Ge, Mouzhi
+and Moscato, Vincenzo
+and Celsi, Chiara
+and Pensa, Ruggero G.
+and Silvestri, Fabrizio
+and Flach, Peter
+and Manco, Giuseppe
+and Spiliopoulou, Myra
+and Masciari, Elio",
+title="Surprised by Attention: Predictable Query Dynamics for Time Series Anomaly Detection",
+booktitle="Machine Learning and Knowledge Discovery in Databases. Applied Data Science Track, Demo Track and Industrial Track",
+year="2027",
+publisher="Springer Nature Switzerland",
+address="Cham",
+pages="217--234",
+abstract="Multivariate time series anomalies often manifest as shifts in cross-channel dependencies rather than simple amplitude excursions. In autonomous driving, for instance, a steering command might be internally consistent but decouple from the resulting lateral acceleration. Residual-based detectors can miss such anomalies when flexible sequence models still reconstruct signals plausibly despite altered coordination.",
+isbn="978-3-032-37685-5"
 }
+
+
 ```
 
 ## Acknowledgment

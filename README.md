@@ -316,8 +316,6 @@ isbn="978-3-032-37685-5"
 
 This repository builds on top of **TSB-AD**. We thank the TSB-AD authors for releasing the benchmark, datasets, and evaluation pipeline that make direct and reproducible comparisons possible.
 
-Or describe it in Issues.
-
 ### 🎉 Acknowledgement
 We appreciate the following github repos a lot for their valuable code base:
 * https://github.com/thedatumorg/TSB-AD

@@ -63,8 +63,8 @@ If your goal is to **reproduce the paper numbers**, the main entry point is the 
 We recommend **Python 3.11**.
 
 ```bash
-git clone <your-fork-url>
-cd Eval_Scripts-main
+git clone https://github.com/iis-esslingen/AxonAD.git
+cd AxonAD
 
 conda create -n axonad python=3.11 -y
 conda activate axonad

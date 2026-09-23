@@ -160,7 +160,7 @@ Before launching a full benchmark, you can run AxonAD on a single series:
 python -m TSB_AD.main \
   --AD_Name AxonAD \
   --data_direc Datasets/TSB-AD-U/ \
-  --filename 001_UCR_Anomaly_DISTORTED1sddb40_35000_52000_52620.csv
+  --filename 001_NAB_id_1_Facility_tr_1007_1st_2014.csv
 ```
 
 ## Supporting experiment scripts

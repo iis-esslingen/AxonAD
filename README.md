@@ -1,27 +1,25 @@
-<h1 align="center">
-  AxonAD
-</h1>
-
 <div align="center">
 
-# Predictable Query Dynamics for Time-Series Anomaly Detection
+# AxonAD
+### Predictable Query Dynamics for Time-Series Anomaly Detection
 
 [![Springer](https://img.shields.io/badge/Springer-Published-6DB33F.svg?style=for-the-badge)](https://link.springer.com/chapter/10.1007/978-3-032-37685-5_13)
-[![Best Paper Award](https://img.shields.io/badge/ECML--PKDD%202026-Best%20Paper%20Award-gold.svg?style=for-the-badge)](#)
+[![arXiv](https://img.shields.io/badge/arXiv-2603.12916-b31b1b.svg?style=for-the-badge)](https://arxiv.org/abs/2603.12916)
+[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=000)](https://huggingface.co/papers/2603.12916)
+[![Best Paper Award](https://img.shields.io/badge/ECML--PKDD%202026-Best%20Paper%20Award-gold.svg?style=for-the-badge)](https://ecmlpkdd.org/2026/awards/)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=for-the-badge)](https://www.apache.org/licenses/LICENSE-2.0)
+
+<br>
 
 [**Kadir-Kaan Özer**](#)<sup>1,2</sup> · [**René Ebeling**](#)<sup>1</sup> · [**Markus Enzweiler**](#)<sup>2</sup>
 
 <sup>1</sup> **Mercedes-Benz AG, Germany** · <sup>2</sup> **Institute for Intelligent Systems, Esslingen University of Applied Sciences, Germany**
 
+<br>
+
+**Published at ECML PKDD 2026 (Applied Data Science Track) · 🏆 Best Paper Award**
+
 ---
-
-[![Springer](https://img.shields.io/badge/Springer-Published-6DB33F.svg?style=plastic)](https://link.springer.com/chapter/10.1007/978-3-032-37685-5_13)
-[![arXiv](https://img.shields.io/badge/arXiv-2603.12916-b31b1b.svg?style=plastic)](https://arxiv.org/abs/2603.12916)
-[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FFD21E?logo=huggingface&logoColor=000)](https://huggingface.co/papers/2603.12916)
-[![Best Paper](https://img.shields.io/badge/🏆%20Best%20Paper-Applied%20Data%20Science-gold.svg?style=plastic)](#)
-
-**Published at ECML PKDD 2026, Applied Data Science Track · 🏆 Best Paper Award**
 
 </div>
 
